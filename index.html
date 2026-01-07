@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Generator - Best Practices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Google Ads Generator</h1>
+            <p class="subtitle">Generate Google Ads following best practices</p>
+        </header>
+
+        <div class="input-section">
+            <div class="tab-container">
+                <button class="tab-btn active" data-tab="url">URL Input</button>
+                <button class="tab-btn" data-tab="text">Text Input</button>
+            </div>
+
+            <div class="tab-content active" id="url-tab">
+                <div class="form-group">
+                    <label for="website-url">Website URL</label>
+                    <input type="url" id="website-url" placeholder="https://example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="business-type">Business Type (Optional)</label>
+                    <input type="text" id="business-type" placeholder="e.g., E-commerce, SaaS, Consulting" />
+                </div>
+            </div>
+
+            <div class="tab-content" id="text-tab">
+                <div class="form-group">
+                    <label for="product-description">Product/Service Description</label>
+                    <textarea id="product-description" rows="4" placeholder="Describe your product or service, key features, benefits, and unique selling points..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="target-keywords">Target Keywords (comma-separated)</label>
+                    <input type="text" id="target-keywords" placeholder="e.g., affordable shoes, running shoes, sports footwear" />
+                </div>
+                <div class="form-group">
+                    <label for="landing-url">Landing Page URL</label>
+                    <input type="url" id="landing-url" placeholder="https://example.com/landing" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="final-url">Final URL (for ads)</label>
+                <input type="url" id="final-url" placeholder="https://example.com" />
+            </div>
+
+            <div class="form-group">
+                <label for="call-to-action">Preferred Call-to-Action</label>
+                <select id="call-to-action">
+                    <option value="">Auto-select</option>
+                    <option value="Shop Now">Shop Now</option>
+                    <option value="Learn More">Learn More</option>
+                    <option value="Get Started">Get Started</option>
+                    <option value="Sign Up">Sign Up</option>
+                    <option value="Try Free">Try Free</option>
+                    <option value="Buy Now">Buy Now</option>
+                    <option value="Contact Us">Contact Us</option>
+                    <option value="Download">Download</option>
+                </select>
+            </div>
+
+            <button class="generate-btn" id="generate-btn">Generate Ads</button>
+        </div>
+
+        <div class="output-section" id="output-section" style="display: none;">
+            <h2>Generated Google Ads</h2>
+
+            <div class="best-practices-info">
+                <h3>✓ Best Practices Applied:</h3>
+                <ul>
+                    <li>15 unique headlines (max 30 characters each)</li>
+                    <li>4 descriptions (max 90 characters each)</li>
+                    <li>Keywords integrated naturally</li>
+                    <li>Clear call-to-action</li>
+                    <li>Unique selling propositions highlighted</li>
+                    <li>Mobile-optimized copy</li>
+                </ul>
+            </div>
+
+            <div class="preview-section">
+                <h3>Ad Preview</h3>
+                <div class="ad-preview" id="ad-preview"></div>
+            </div>
+
+            <div class="headlines-section">
+                <h3>Headlines (15)</h3>
+                <div id="headlines-list" class="items-list"></div>
+            </div>
+
+            <div class="descriptions-section">
+                <h3>Descriptions (4)</h3>
+                <div id="descriptions-list" class="items-list"></div>
+            </div>
+
+            <div class="export-section">
+                <h3>Export Options</h3>
+                <div class="export-buttons">
+                    <button class="export-btn" id="export-csv">Download CSV</button>
+                    <button class="export-btn" id="export-text">Download Text File</button>
+                    <button class="export-btn" id="copy-clipboard">Copy to Clipboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Following <a href="https://support.google.com/google-ads/answer/7684791" target="_blank">Google Ads Best Practices</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
